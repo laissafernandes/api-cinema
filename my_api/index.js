@@ -9,8 +9,7 @@ app.use(express.json())
 routes(app)
 
 app.listen(port, () => {
-   console.log(`Está rodando na porta ${port}`) 
+   console.log(`Servidor disponível em http://localhost:${port}`) 
 }) 
 
-module.exports = app
-
+module.exports = app;

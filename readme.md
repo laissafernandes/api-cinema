@@ -14,7 +14,7 @@ Dessa forma, utilizou-se o banco de dados relacional (SQLite3), Api to tipo Rest
 
 <p> Foi utilizada a linguagem JavaScript com Node.js, a utilização do sequelize, além de todo o framework Express e o banco relacional SQLite3.
 
-<img src="https://img.icons8.com/color/48/000000/expand-arrow--v1.png"/> <center><h2>Dependências utilizadas:</h2></center>
+<img src="https://img.icons8.com/color/48/000000/expand-arrow--v1.png"/> <center><h2>Dependências utilizadas:</h2>
 
 ```js
 "dependencies": {
@@ -30,7 +30,7 @@ Dessa forma, utilizou-se o banco de dados relacional (SQLite3), Api to tipo Rest
 
 * As dependências podem ser encontradas -><a href="">aqui</a><-
 
-<img src="https://img.icons8.com/color/48/000000/expand-arrow--v1.png"/> <center><h2>As dependências do desenvolvimento:</h2></center>
+<img src="https://img.icons8.com/color/48/000000/expand-arrow--v1.png"/> <center><h2>As dependências do desenvolvimento:</h2>
 
 ```js
 "devDependencies": {
@@ -41,4 +41,86 @@ Dessa forma, utilizou-se o banco de dados relacional (SQLite3), Api to tipo Rest
 ```js
 npm install --save-dev nodemon
 ```
+<img src="https://img.icons8.com/color/48/000000/expand-arrow--v1.png"/> <center><h2>Comando para iniciar o terminal:</h2>
 
+```js
+npm start || npm run dev
+```
+
+* <p> Configuração dos scripts utilizados no terminal encontra-se abaixo. Vale destacar que os comandos encontram-se no documento package.json: </p>
+
+```js
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./my_api/index.js",
+    "migrate": "npx sequelize-cli db:migrate",
+    "seed": "npx sequelize-cli db:seed:all",
+    "start": "node ./my_api/index.js"
+}
+```
+* <p> Vale ressaltar que foi utilizada a versão v16.14.0. do Node.js, dessa forma para realizar a instalação é necessário verificar uma versão igual ou superior a informada acima.<p>
+
+------
+
+## Rotas da api:
+
+No presente momento temos apenas a rota <b>"/pedidos"</b> onde podemos fazer alguns métodos interessantes.
+<br>
+<br>
+
+### Ver todos os pedidos:
+
+Utilizar o método HTTP Get no caminho <b>"url da api" + /pedidos</b>
+<br>
+<br>
+
+### Buscar pedidos por id:
+
+Utilizar o método HTTP Get no caminho <b>"url da api" + /pedidos/id</b>
+<br>
+<br>
+
+### Adicionar pedidos:
+Utilizar o método HTTP Post no caminho <b>"url da api" + /pedidos</b> com todos os dados necessários para o seu banco de dados. Abaijo segue um json de exemplo para corpo da requisição.
+
+```json
+{
+      "ENDERECO_CLIENTE": "STRING",
+      "ENDERECO_FORNECEDOR": "STRING",
+      "PRECO_FRETE": "DOUBLE",
+      "PRAZO_ENTREGA": "INT",
+      "ID_PRODUTO": "INT",
+      "ID_FORNECEDOR": "INT",
+      "PRECO_PRODUTO": "DOUBLE",
+    }
+```
+<br>
+<br>
+
+### Modificar um pedidos já existente:
+Utilizar o método HTTP Patch no caminho <b>"url da api" + /pedidos/:id</b> passando os valores que deseja alterar especificando seus devidos campos. Para isso basta respeitar a sintaxe json novamente passada abaixo no body da requisição.
+```json
+{
+      "ENDERECO_CLIENTE": "STRING",
+      "ENDERECO_FORNECEDOR": "STRING",
+      "PRECO_FRETE": "DOUBLE",
+      "PRAZO_ENTREGA": "INT",
+      "ID_PRODUTO": "INT",
+      "ID_FORNECEDOR": "INT",
+      "PRECO_PRODUTO": "DOUBLE",
+    }
+```
+<br>
+<br>
+
+### Deletar um pedidos:
+Utilizar o método HTTP Delete no caminho <b>"url da api" + /pedidos/:id</b>.
+
+<br>
+<br>
+
+### OBS.2: Caso você apague o arquivo do banco de dados sem querer por algum motivo desconhecido, rode o comando abaixo para criar outro novamente, mas atenção, esse novo banco virar vazio, apenas com a linha 1 contendo o exemplo dos tipos de dados aceitos nele.
+
+```node
+node ./src/infra/create-database.js
+```
