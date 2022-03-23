@@ -44,7 +44,7 @@ npm install --save-dev nodemon
 npm run dev
 ```
 
-❤ <p> Configuração dos scripts utilizados no terminal encontra-se abaixo. Vale destacar que os comandos encontram-se no documento package.json: </p>
+❤ Configuração dos scripts utilizados no terminal encontra-se abaixo. Vale destacar que os comandos encontram-se no documento package.json: </p>
 
 ```js
 "scripts": {
@@ -55,7 +55,7 @@ npm run dev
     "start": "node ./my_api/index.js"
 }
 ```
-❤ <p> Vale ressaltar que foi utilizada a versão v16.14.0. do Node.js, dessa forma para realizar a instalação é necessário verificar uma versão igual ou superior a informada acima.<p>
+❤  Vale ressaltar que foi utilizada a versão v16.14.0. do Node.js, dessa forma para realizar a instalação é necessário verificar uma versão igual ou superior a informada acima.
 
 
 <img src="https://img.icons8.com/color/48/000000/expand-arrow--v1.png"/> <center><h2>As rotas da API:</h2>
@@ -73,6 +73,7 @@ router.delete('/autores/:id', AtoresController.apagaAtor)
 ```
 
 ❤ Caso você apague o arquivo do banco de dados, bata rodar o comando abaixo para criar outro banco de dados novamente. 
+<br>
 ❤ Atente-se que o arquivo não pode ficar vazio, a fim de evitar erros em sua aplicação. 
 
 ```js
