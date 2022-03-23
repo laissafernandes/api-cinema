@@ -1,6 +1,3 @@
-<!-- - falta completar o controllers (não esquecer de importar para as rotas)
-- validacao (serviços)
-- readme -->
 
 <center><img src="https://img.icons8.com/bubbles/50/000000/star.png"/>
 <h1> Projeto responsável por desenvolver uma API Rest em Node.js utilizando o framework EXPRESS </h1>
@@ -28,7 +25,7 @@ Dessa forma, utilizou-se o banco de dados relacional (SQLite3), Api to tipo Rest
 }
 ```
 
-* As dependências podem ser encontradas -><a href="">aqui</a><-
+❤ As dependências podem ser encontradas -><a href="">aqui</a><-
 
 <img src="https://img.icons8.com/color/48/000000/expand-arrow--v1.png"/> <center><h2>As dependências do desenvolvimento:</h2>
 
@@ -37,7 +34,7 @@ Dessa forma, utilizou-se o banco de dados relacional (SQLite3), Api to tipo Rest
     "nodemon": "^2.0.15"
 }
 ```
-* Caso deseje instalar o nodemon em suas dependências para o ambiente de aplicação, basta copiar o comando abaixo e utilzar em seu terminal, após o comando das dependências obrigatórias.
+❤ Caso deseje instalar o nodemon em suas dependências para o ambiente de aplicação, basta copiar o comando abaixo e utilzar em seu terminal, após o comando das dependências obrigatórias.
 ```js
 npm install --save-dev nodemon
 ```
@@ -47,7 +44,7 @@ npm install --save-dev nodemon
 npm run dev
 ```
 
-* <p> Configuração dos scripts utilizados no terminal encontra-se abaixo. Vale destacar que os comandos encontram-se no documento package.json: </p>
+❤ <p> Configuração dos scripts utilizados no terminal encontra-se abaixo. Vale destacar que os comandos encontram-se no documento package.json: </p>
 
 ```js
 "scripts": {
@@ -58,9 +55,8 @@ npm run dev
     "start": "node ./my_api/index.js"
 }
 ```
-* <p> Vale ressaltar que foi utilizada a versão v16.14.0. do Node.js, dessa forma para realizar a instalação é necessário verificar uma versão igual ou superior a informada acima.<p>
+❤ <p> Vale ressaltar que foi utilizada a versão v16.14.0. do Node.js, dessa forma para realizar a instalação é necessário verificar uma versão igual ou superior a informada acima.<p>
 
-------
 
 <img src="https://img.icons8.com/color/48/000000/expand-arrow--v1.png"/> <center><h2>As rotas da API:</h2>
 
@@ -76,10 +72,12 @@ router.delete('/autores/:id', AtoresController.apagaAtor)
 
 ```
 
-*  Caso você apague o arquivo do banco de dados, bata rodar o comando abaixo para criar outro banco de dados novamente. 
-* Atente-se que o arquivo não pode ficar vazio, a fim de evitar erros em sua aplicação. 
+❤ Caso você apague o arquivo do banco de dados, bata rodar o comando abaixo para criar outro banco de dados novamente. 
+❤ Atente-se que o arquivo não pode ficar vazio, a fim de evitar erros em sua aplicação. 
 
 ```js
 
 npx sequelize-cli db:migrate
 ```
+
+Feito com 💛 por &copy;LaíssaFernandes - T10 - Resilia Educação
