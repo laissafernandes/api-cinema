@@ -7,7 +7,7 @@
 
 <img src="https://img.icons8.com/color/48/000000/expand-arrow--v1.png"/> <center><h2>O projeto:</h2>
 
-<p> O projeto desenvolvido foi capaz de realizar uma aplicação que é capaz de gerenciar a lista de atores e atrizes dos filmes presentes no catálogo de um cinema local, porém a aplicação pode ser desenvolvida para outro tipo de serviço. 
+<p> O projeto de final do módulo 4 pela Resilia Educação. O projeto foi desenvolvido foi capaz de realizar uma aplicação que é capaz de gerenciar a lista de atores e atrizes dos filmes presentes no catálogo de um cinema local, porém a aplicação pode ser desenvolvida para outro tipo de serviço. 
 Dessa forma, utilizou-se o banco de dados relacional (SQLite3), Api to tipo Rest e toda a organização foi baseada no conceito MVC.</p>
 
 <img src="https://img.icons8.com/color/48/000000/expand-arrow--v1.png"/> <center><h2>Ferramentas utilizadas:</h2>
@@ -44,7 +44,7 @@ npm install --save-dev nodemon
 <img src="https://img.icons8.com/color/48/000000/expand-arrow--v1.png"/> <center><h2>Comando para iniciar o terminal:</h2>
 
 ```js
-npm start || npm run dev
+npm run dev
 ```
 
 * <p> Configuração dos scripts utilizados no terminal encontra-se abaixo. Vale destacar que os comandos encontram-se no documento package.json: </p>
@@ -62,15 +62,14 @@ npm start || npm run dev
 
 ------
 
-## Rotas da api:
+<img src="https://img.icons8.com/color/48/000000/expand-arrow--v1.png"/> <center><h2>As rotas da API:</h2>
 
-No presente momento temos apenas a rota <b>"/pedidos"</b> onde podemos fazer alguns métodos interessantes.
+Inicialmente há apenas a rota <b>"/atores"</b>.
 <br>
-<br>
 
-### Ver todos os pedidos:
+<img src="https://img.icons8.com/color/48/000000/expand-arrow--v1.png"/> <center><h2>Visualizar as informações dos atores:</h2>
 
-Utilizar o método HTTP Get no caminho <b>"url da api" + /pedidos</b>
+Utilizar o GET no caminho <b>/atores</b>
 <br>
 <br>
 
@@ -85,13 +84,12 @@ Utilizar o método HTTP Post no caminho <b>"url da api" + /pedidos</b> com todos
 
 ```json
 {
-      "ENDERECO_CLIENTE": "STRING",
-      "ENDERECO_FORNECEDOR": "STRING",
-      "PRECO_FRETE": "DOUBLE",
-      "PRAZO_ENTREGA": "INT",
-      "ID_PRODUTO": "INT",
-      "ID_FORNECEDOR": "INT",
-      "PRECO_PRODUTO": "DOUBLE",
+    "nome": "STRING",
+    "sobrenome": "STRING",
+    "email": "STRING",
+    "data_de_nascimento": "DATEONLY",
+    "sexo": "STRING",
+    "quantidade_de_aparicoes": "NUMBER"
     }
 ```
 <br>
@@ -119,7 +117,7 @@ Utilizar o método HTTP Delete no caminho <b>"url da api" + /pedidos/:id</b>.
 <br>
 <br>
 
-### OBS.2: Caso você apague o arquivo do banco de dados sem querer por algum motivo desconhecido, rode o comando abaixo para criar outro novamente, mas atenção, esse novo banco virar vazio, apenas com a linha 1 contendo o exemplo dos tipos de dados aceitos nele.
+### * OBS: Caso você apague o arquivo do banco de dados sem querer por algum motivo desconhecido, rode o comando abaixo para criar outro novamente, mas atenção, esse novo banco virar vazio, apenas com a linha 1 contendo o exemplo dos tipos de dados aceitos nele.
 
 ```node
 node ./src/infra/create-database.js
