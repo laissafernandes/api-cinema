@@ -25,7 +25,7 @@ Dessa forma, utilizou-se o banco de dados relacional (SQLite3), Api to tipo Rest
 }
 ```
 
-❤ As dependências podem ser encontradas -><a href="">aqui</a><-
+❤ As dependências podem ser encontradas -><a href="https://github.com/laissafernandes/api-cinema/blob/main/package.json">aqui</a><-
 
 <img src="https://img.icons8.com/color/48/000000/expand-arrow--v1.png"/> <center><h2>As dependências do desenvolvimento:</h2>
 
