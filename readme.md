@@ -1,5 +1,5 @@
 
-<center><img src="https://img.icons8.com/bubbles/50/000000/star.png"/>
+<center><img src="https://img.icons8.com/bubbles/50/000000/star.png"/> </center>
 <h1> Projeto responsável por desenvolver uma API Rest em Node.js utilizando o framework EXPRESS </h1>
 
 <img src="https://img.icons8.com/color/48/000000/expand-arrow--v1.png"/> <center><h2>O projeto:</h2>
