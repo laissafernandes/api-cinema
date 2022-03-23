@@ -64,61 +64,22 @@ npm run dev
 
 <img src="https://img.icons8.com/color/48/000000/expand-arrow--v1.png"/> <center><h2>As rotas da API:</h2>
 
-Inicialmente há apenas a rota <b>"/atores"</b>.
-<br>
+Inicialmente há apenas a rota <b>"/atores"</b>. Com a utilização do CRUD temos:
 
-<img src="https://img.icons8.com/color/48/000000/expand-arrow--v1.png"/> <center><h2>Visualizar as informações dos atores:</h2>
+```js
 
-Utilizar o GET no caminho <b>/atores</b>
-<br>
-<br>
+router.get('/atores', AtoresController.pegaTodosOsAtores) - // visualizar as infom. dos atores
+router.get('/atores/:id', AtoresController.pegaUmAtor)
+router.post('/atores', AtoresController.criaAtor)
+router.put('/atores/:id', AtoresController.atualizaAtor)
+router.delete('/autores/:id', AtoresController.apagaAtor)
 
-### Buscar pedidos por id:
-
-Utilizar o método HTTP Get no caminho <b>"url da api" + /pedidos/id</b>
-<br>
-<br>
-
-### Adicionar pedidos:
-Utilizar o método HTTP Post no caminho <b>"url da api" + /pedidos</b> com todos os dados necessários para o seu banco de dados. Abaijo segue um json de exemplo para corpo da requisição.
-
-```json
-{
-    "nome": "STRING",
-    "sobrenome": "STRING",
-    "email": "STRING",
-    "data_de_nascimento": "DATEONLY",
-    "sexo": "STRING",
-    "quantidade_de_aparicoes": "NUMBER"
-    }
 ```
-<br>
-<br>
 
-### Modificar um pedidos já existente:
-Utilizar o método HTTP Patch no caminho <b>"url da api" + /pedidos/:id</b> passando os valores que deseja alterar especificando seus devidos campos. Para isso basta respeitar a sintaxe json novamente passada abaixo no body da requisição.
-```json
-{
-      "ENDERECO_CLIENTE": "STRING",
-      "ENDERECO_FORNECEDOR": "STRING",
-      "PRECO_FRETE": "DOUBLE",
-      "PRAZO_ENTREGA": "INT",
-      "ID_PRODUTO": "INT",
-      "ID_FORNECEDOR": "INT",
-      "PRECO_PRODUTO": "DOUBLE",
-    }
-```
-<br>
-<br>
+*  Caso você apague o arquivo do banco de dados, bata rodar o comando abaixo para criar outro banco de dados novamente. 
+* Atente-se que o arquivo não pode ficar vazio, a fim de evitar erros em sua aplicação. 
 
-### Deletar um pedidos:
-Utilizar o método HTTP Delete no caminho <b>"url da api" + /pedidos/:id</b>.
+```js
 
-<br>
-<br>
-
-### * OBS: Caso você apague o arquivo do banco de dados sem querer por algum motivo desconhecido, rode o comando abaixo para criar outro novamente, mas atenção, esse novo banco virar vazio, apenas com a linha 1 contendo o exemplo dos tipos de dados aceitos nele.
-
-```node
-node ./src/infra/create-database.js
+npx sequelize-cli db:migrate
 ```

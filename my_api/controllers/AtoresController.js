@@ -38,7 +38,7 @@ class AtoresController {
       const { id } = req.params
       const novasInfos = req.body
       try {
-        await database.Atores.update(novasInfos, { where: { id: Number(id) }})
+        await Atores.update(novasInfos, { where: { id: Number(id) }})
         const appAtualizado = await Atores.findOne( { where: { id: Number(id) }})
         return res.status(200).json(appAtualizado)
       } catch (error) {
